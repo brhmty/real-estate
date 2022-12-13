@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../assets/images/main-photo.jpg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+@font-face {
+  font-family: "after-smile";
+  src: url("../../assets/font/AfterSmileRegular.otf");
+  font-weight: normal;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.--logo {
+  height: 50px;
+  width: 50px;
+  margin: 10px;
+}
+
+.--headlink {
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  text-decoration: none;
+  margin: 10px;
+}
+.--headlink .--headline {
+  font-family: "after-smile", sans-serif;
+  font-size: xx-large;
+  cursor: pointer;
+}
+.--headlink .--my {
+  color: red;
+}
+.--headlink .--new {
+  color: blue;
+}
+.--headlink .--home {
+  color: red;
+}
+
+.nav-links {
+  text-align: right;
+  flex: 1;
+}
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 1% 1%;
+}
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: red;
+}
+.nav-links a::after {
+  content: "";
+  display: block;
+  background-color: blue;
+  margin: auto;
+  width: 0%;
+  height: 2px;
+  transition: 0.5s;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}/*# sourceMappingURL=styles.css.map */
