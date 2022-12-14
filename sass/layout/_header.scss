@@ -1,10 +1,13 @@
 @use "../abstracts/variables";
+@use "../abstracts/mixin";
 
 .header {
-  width: 100%;
-  min-height: variables.$min-height;
-  background-image: url("../assets/images/main-photo.jpg");
-  background-position: center;
-  background-size: cover;
-  position: relative;
+  @include mixin.header(
+    100%,
+    variables.$min-height,
+    url("../assets/images/main-photo.jpg"),
+    center,
+    cover,
+    relative
+  );
 }

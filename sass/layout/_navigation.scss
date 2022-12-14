@@ -3,59 +3,40 @@
 @use "../base/typography";
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  @include mixin.nav(flex, wrap, space-between, center);
 
-.--logo {
-  @include mixin.logo-style(50px, 50px, variables.$nav-margin);
-}
-.--headlink {
-  display: flex;
-  flex-direction: row;
-  place-items: center;
-  text-decoration: none;
-  margin: variables.$nav-margin;
-  .--headline {
-    font-family: "after-smile", sans-serif;
-    font-size: xx-large;
-    cursor: pointer;
+  .--logo {
+    @include mixin.logo-style(50px, 50px, variables.$nav-margin);
   }
-  .--my {
-    color: red;
-  }
-  .--new {
-    color: blue;
-  }
-  .--home {
-    color: red;
-  }
-}
-
-.nav-links {
-  text-align: right;
-  flex: 1;
-  ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 1% 1%;
-  }
-  a {
-    text-decoration: none;
-    font-weight: bold;
-    color: red;
-    &::after {
-      content: "";
-      display: block;
-      background-color: blue;
-      margin: auto;
-      width: 0%;
-      height: 2px;
-      transition: 0.5s;
+  .--headlink {
+    @include mixin.headlink(flex, row, center, none, variables.$nav-margin);
+    .--headline {
+      @include mixin.headline(after-smile, sans-serif, xx-large, pointer);
     }
-    &:hover::after {
-      width: 100%;
+    .--my {
+      @include mixin.my(red);
+    }
+    .--new {
+      @include mixin.new(blue);
+    }
+    .--home {
+      @include mixin.home(red);
+    }
+  }
+  .nav-links {
+    @include mixin.nav-links(right, 1);
+
+    ul li {
+      @include mixin.ul-li(none, inline-block, 1% 1%);
+    }
+    a {
+      @include mixin.a(none, bold, red);
+      &::after {
+        @include mixin.a-after(block, blue, auto, 0%, 2px, 0.5s);
+      }
+      &:hover::after {
+        @include mixin.a-hover-after(100%);
+      }
     }
   }
 }

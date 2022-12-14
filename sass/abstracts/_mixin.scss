@@ -2,4 +2,126 @@
   height: $height;
   width: $width;
   margin: $margin;
-} ;
+}
+
+@mixin header(
+  $width,
+  $min-height,
+  $background-image,
+  $background-position,
+  $background-size,
+  $position
+) {
+  width: $width;
+  min-height: $min-height;
+  background-image: $background-image;
+  background-position: $background-position;
+  background-size: $background-size;
+  position: $position;
+}
+
+@mixin nav($display, $flex-wrap, $justify-content, $align-items) {
+  display: $display;
+  flex-wrap: $flex-wrap;
+  justify-content: justify-content;
+  align-items: $align-items;
+}
+
+@mixin headlink(
+  $display,
+  $flex-direction,
+  $place-items,
+  $text-decoration,
+  $margin
+) {
+  display: $display;
+  flex-direction: $flex-direction;
+  place-items: $place-items;
+  text-decoration: $text-decoration;
+  margin: $margin;
+}
+
+@mixin headline($font-family, $font-family-alternative, $font-size, $cursor) {
+  font-family: $font-family, $font-family-alternative;
+  font-size: $font-size;
+  cursor: $cursor;
+}
+
+@mixin my($color) {
+  color: $color;
+}
+
+@mixin new($color) {
+  color: $color;
+}
+
+@mixin home($color) {
+  color: $color;
+}
+
+@mixin nav-links($text-align, $flex) {
+  text-align: $text-align;
+  flex: $flex;
+}
+
+@mixin ul-li($list-style, $display, $padding) {
+  list-style: $list-style;
+  display: $display;
+  padding: $padding;
+}
+
+@mixin a($text-decoration, $font-weight, $color) {
+  text-decoration: $text-decoration;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin a-after(
+  $display,
+  $background-color,
+  $margin,
+  $width,
+  $height,
+  $transition
+) {
+  content: "";
+  display: $display;
+  background-color: $background-color;
+  margin: $margin;
+  width: $width;
+  height: $height;
+  transition: $transition;
+}
+
+@mixin a-hover-after($width) {
+  width: $width;
+}
+
+@mixin main-box($position, $display, $top, $left, $transform, $text-align) {
+  position: $position;
+  display: $display;
+  top: $top;
+  left: $left;
+  transform: $transform;
+  text-align: $text-align;
+}
+
+@mixin main-h1($font-size, $font-weight, $color) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  color: $color;
+}
+
+@mixin main-p(
+  $font-size,
+  $margin-top,
+  $font-weight,
+  $color,
+  $background-color
+) {
+  font-size: $font-size;
+  margin-top: $margin-top;
+  font-weight: $font-weight;
+  color: $color;
+  background-color: $background-color;
+}

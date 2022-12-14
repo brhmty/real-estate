@@ -19,53 +19,51 @@
 }
 nav {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: justify-content;
   align-items: center;
 }
-
-.--logo {
+nav .--logo {
   height: 50px;
   width: 50px;
   margin: 10px;
 }
-
-.--headlink {
+nav .--headlink {
   display: flex;
   flex-direction: row;
   place-items: center;
   text-decoration: none;
   margin: 10px;
 }
-.--headlink .--headline {
-  font-family: "after-smile", sans-serif;
+nav .--headlink .--headline {
+  font-family: after-smile, sans-serif;
   font-size: xx-large;
   cursor: pointer;
 }
-.--headlink .--my {
+nav .--headlink .--my {
   color: red;
 }
-.--headlink .--new {
+nav .--headlink .--new {
   color: blue;
 }
-.--headlink .--home {
+nav .--headlink .--home {
   color: red;
 }
-
-.nav-links {
+nav .nav-links {
   text-align: right;
   flex: 1;
 }
-.nav-links ul li {
+nav .nav-links ul li {
   list-style: none;
   display: inline-block;
   padding: 1% 1%;
 }
-.nav-links a {
+nav .nav-links a {
   text-decoration: none;
   font-weight: bold;
   color: red;
 }
-.nav-links a::after {
+nav .nav-links a::after {
   content: "";
   display: block;
   background-color: blue;
@@ -74,6 +72,6 @@ nav {
   height: 2px;
   transition: 0.5s;
 }
-.nav-links a:hover::after {
+nav .nav-links a:hover::after {
   width: 100%;
 }/*# sourceMappingURL=styles.css.map */
