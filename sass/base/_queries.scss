@@ -1,0 +1,105 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+
+@media (max-width: 480px) {
+  nav {
+    .--logo {
+      @include mixin.logo-style(20px, 20px, variables.$nav-margin);
+    }
+    .--headlink {
+      .--headline {
+        font-size: large;
+      }
+    }
+
+    .nav-links {
+      position: absolute;
+      right: 0px;
+      top: 10px;
+      display: none;
+
+      ul li {
+        display: block;
+        background-color: red;
+      }
+      ul {
+        border: 2px solid black;
+      }
+      a {
+        color: blue;
+      }
+      li {
+        text-align: center;
+        border-bottom: 2px solid black;
+      }
+    }
+
+    #bar-icon {
+      display: block;
+      color: red;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+
+  .__main-box {
+    .--main-h1 {
+      @include mixin.main-h1(1.5em, bold, red);
+    }
+    .--main-p {
+      @include mixin.main-p(0.8em, 10px, bold, white, rgba(0, 0, 0, 0.7));
+    }
+  }
+}
+
+@media (max-width: 508px) and (min-width: 480px) {
+  nav {
+    .nav-links {
+      ul li {
+        font-size: x-small;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) and (min-width: 508px) {
+  nav {
+    .--logo {
+      @include mixin.logo-style(35px, 35px, variables.$nav-margin);
+    }
+    .--headlink {
+      .--headline {
+        font-size: x-large;
+      }
+    }
+    .nav-links {
+      ul li {
+        font-size: small;
+      }
+    }
+  }
+}
+
+@media (max-width: 508px) and (min-width: 480px),
+  (max-width: 768px) and (min-width: 508px) {
+  nav {
+    .--logo {
+      @include mixin.logo-style(35px, 35px, variables.$nav-margin);
+    }
+    .--headlink {
+      .--headline {
+        font-size: x-large;
+      }
+    }
+  }
+
+  .__main-box {
+    .--main-h1 {
+      @include mixin.main-h1(1.8em, bold, red);
+    }
+    .--main-p {
+      @include mixin.main-p(1.1em, 20px, bold, white, rgba(0, 0, 0, 0.7));
+    }
+  }
+}

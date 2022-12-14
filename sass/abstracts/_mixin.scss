@@ -1,6 +1,8 @@
-@mixin logo-style($height, $width, $margin) {
-  height: $height;
+@use "../abstracts/variables";
+
+@mixin logo-style($width, $height, $margin) {
   width: $width;
+  height: $height;
   margin: $margin;
 }
 

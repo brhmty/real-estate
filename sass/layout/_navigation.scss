@@ -4,7 +4,6 @@
 
 nav {
   @include mixin.nav(flex, wrap, space-between, center);
-
   .--logo {
     @include mixin.logo-style(50px, 50px, variables.$nav-margin);
   }
@@ -25,7 +24,6 @@ nav {
   }
   .nav-links {
     @include mixin.nav-links(right, 1);
-
     ul li {
       @include mixin.ul-li(none, inline-block, 1% 1%);
     }
@@ -38,5 +36,9 @@ nav {
         @include mixin.a-hover-after(100%);
       }
     }
+  }
+  #bar-icon,
+  #close-icon {
+    display: none;
   }
 }

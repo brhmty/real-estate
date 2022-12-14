@@ -24,8 +24,8 @@ nav {
   align-items: center;
 }
 nav .--logo {
-  height: 50px;
   width: 50px;
+  height: 50px;
   margin: 10px;
 }
 nav .--headlink {
@@ -74,4 +74,119 @@ nav .nav-links a::after {
 }
 nav .nav-links a:hover::after {
   width: 100%;
+}
+nav #bar-icon,
+nav #close-icon {
+  display: none;
+}
+
+.__main-box {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.__main-box .--main-h1 {
+  font-size: 4em;
+  font-weight: bold;
+  color: red;
+}
+.__main-box .--main-p {
+  font-size: 1.1em;
+  margin-top: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 480px) {
+  nav .--logo {
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+  }
+  nav .--headlink .--headline {
+    font-size: large;
+  }
+  nav .nav-links {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    display: none;
+  }
+  nav .nav-links ul li {
+    display: block;
+    background-color: red;
+  }
+  nav .nav-links ul {
+    border: 2px solid black;
+  }
+  nav .nav-links a {
+    color: blue;
+  }
+  nav .nav-links li {
+    text-align: center;
+    border-bottom: 2px solid black;
+  }
+  nav #bar-icon {
+    display: block;
+    color: red;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  .__main-box .--main-h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: red;
+  }
+  .__main-box .--main-p {
+    font-size: 0.8em;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+@media (max-width: 508px) and (min-width: 480px) {
+  nav .nav-links ul li {
+    font-size: x-small;
+  }
+}
+@media (max-width: 768px) and (min-width: 508px) {
+  nav .--logo {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+  }
+  nav .--headlink .--headline {
+    font-size: x-large;
+  }
+  nav .nav-links ul li {
+    font-size: small;
+  }
+}
+@media (max-width: 508px) and (min-width: 480px), (max-width: 768px) and (min-width: 508px) {
+  nav .--logo {
+    width: 35px;
+    height: 35px;
+    margin: 10px;
+  }
+  nav .--headlink .--headline {
+    font-size: x-large;
+  }
+  .__main-box .--main-h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: red;
+  }
+  .__main-box .--main-p {
+    font-size: 1.1em;
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
 }/*# sourceMappingURL=styles.css.map */
