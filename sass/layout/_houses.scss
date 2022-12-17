@@ -1,0 +1,83 @@
+@use "../abstracts/mixin";
+@use "../abstracts/variables";
+.houses {
+  @include mixin.container(80%, variables.$min-height, $margin: auto);
+
+  h1,
+  p {
+    text-align: center;
+    margin: 20px;
+  }
+
+  h1 {
+    @include mixin.text-style(4em, bold, red);
+  }
+
+  > p {
+    @include mixin.text-style(
+      $font-size: 1.1em,
+      $font-weight: bold,
+      $margin-top: 20px,
+      $color: white,
+      $background-color: rgba(0, 0, 0, 0.7)
+    );
+  }
+
+  .house-imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    > div {
+      > p {
+        @include mixin.text-style(
+          $font-size: 1.1em,
+          $font-weight: bold,
+          $color: white
+        );
+        position: absolute;
+        margin: 0;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        opacity: 0;
+        z-index: 2;
+      }
+    }
+  }
+  .__house-1 {
+    @include mixin.house-container(url(../../assets/images/house-1.jpg));
+    &:hover {
+      p {
+        @include mixin.house-p();
+      }
+      &::after {
+        @include mixin.house-after();
+      }
+    }
+  }
+
+  .__house-2 {
+    @include mixin.house-container(url(../../assets/images/house-2.jpg));
+    &:hover {
+      p {
+        @include mixin.house-p();
+      }
+      &::after {
+        @include mixin.house-after();
+      }
+    }
+  }
+
+  .__house-3 {
+    @include mixin.house-container(url(../../assets/images/house-3.jpg));
+    &:hover {
+      p {
+        @include mixin.house-p();
+      }
+      &::after {
+        @include mixin.house-after();
+      }
+    }
+  }
+}

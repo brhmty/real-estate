@@ -10,9 +10,15 @@
     center
   );
   .--main-h1 {
-    @include mixin.main-h1(4em, bold, red);
+    @include mixin.text-style(4em, bold, red);
   }
   .--main-p {
-    @include mixin.main-p(1.1em, 20px, bold, white, rgba(0, 0, 0, 0.7));
+    @include mixin.text-style(
+      $font-size: 1.1em,
+      $font-weight: bold,
+      $margin-top: 20px,
+      $color: white,
+      $background-color: rgba(0, 0, 0, 0.7)
+    );
   }
 }

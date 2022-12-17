@@ -25,16 +25,19 @@
           </label>
         </a>
         <div class="nav-links">
+          <i
+            class="fa-solid fa-xmark"
+            id="close-icon"
+            onclick="hideNavLinks()"
+          ></i>
           <ul>
             <li><a href="">HOME</a></li>
             <li><a href="">ABOUT</a></li>
-            <li><a href="">COURSE</a></li>
             <li><a href="">BLOG</a></li>
             <li><a href="">CONTACT</a></li>
           </ul>
         </div>
-        <i class="fa-solid fa-bars" id="bar-icon"></i>
-        <i class="fa-solid fa-circle-xmark" id="close-icon"></i>
+        <i class="fa-solid fa-bars" id="bar-icon" onclick="showNavLinks()"></i>
       </nav>
       <div class="__main-box">
         <h1 class="--main-h1">Best Estate Agent in The World</h1>
@@ -48,5 +51,30 @@
         </p>
       </div>
     </section>
+    <section class="houses">
+      <h1>Our Houses</h1>
+      <p>Lorem ipsum dolor sit amet</p>
+      <div class="house-imgs">
+        <div class="__house-1">
+          <p>Sacramento</p>
+        </div>
+        <div class="__house-2">
+          <p>Wellington</p>
+        </div>
+        <div class="__house-3">
+          <p>Bournemouth</p>
+        </div>
+      </div>
+    </section>
+    <script>
+      let navLinks = document.getElementsByClassName("nav-links")[0];
+      console.log(navLinks);
+      /*  */ function showNavLinks() {
+        navLinks.style.display = "block";
+      }
+      function hideNavLinks() {
+        navLinks.style.display = "none";
+      }
+    </script>
   </body>
 </html>

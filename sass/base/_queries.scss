@@ -15,23 +15,30 @@
     .nav-links {
       position: absolute;
       right: 0px;
-      top: 10px;
+      top: 0px;
       display: none;
 
       ul li {
-        display: block;
+        display: flex;
+        align-content: space-between;
         background-color: red;
-      }
-      ul {
-        border: 2px solid black;
-      }
-      a {
-        color: blue;
       }
       li {
         text-align: center;
-        border-bottom: 2px solid black;
       }
+      a {
+        color: white;
+        padding: 10px;
+        font-weight: lighter;
+      }
+    }
+
+    #close-icon {
+      display: flex;
+      align-items: flex-end;
+      padding: 10px;
+      color: white;
+      background-color: red;
     }
 
     #bar-icon {
@@ -40,15 +47,44 @@
       position: absolute;
       right: 10px;
       top: 10px;
+      z-index: 1;
     }
   }
 
   .__main-box {
     .--main-h1 {
-      @include mixin.main-h1(1.5em, bold, red);
+      @include mixin.text-style(
+        $font-size: 1.5em,
+        $font-weight: bold,
+        $color: red
+      );
     }
     .--main-p {
-      @include mixin.main-p(0.8em, 10px, bold, white, rgba(0, 0, 0, 0.7));
+      @include mixin.text-style(
+        $font-size: 0.8em,
+        $font-weight: bold,
+        $margin-top: 10px,
+        $color: white,
+        $background-color: rgba(0, 0, 0, 0.7)
+      );
+    }
+  }
+  .houses {
+    .house-imgs {
+      flex-direction: column;
+      align-content: space-between;
+
+      .__house-1 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .__house-2 {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .__house-3 {
+        width: 100%;
+      }
     }
   }
 }
@@ -96,10 +132,20 @@
 
   .__main-box {
     .--main-h1 {
-      @include mixin.main-h1(1.8em, bold, red);
+      @include mixin.text-style(
+        $font-size: 1.8em,
+        $font-weight: bold,
+        $color: red
+      );
     }
     .--main-p {
-      @include mixin.main-p(1.1em, 20px, bold, white, rgba(0, 0, 0, 0.7));
+      @include mixin.text-style(
+        $font-size: 1.1em,
+        $font-weight: bold,
+        $margin-top: 20px,
+        $color: white,
+        $background-color: rgba(0, 0, 0, 0.7)
+      );
     }
   }
 }

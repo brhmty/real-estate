@@ -1,8 +1,8 @@
-@use "../abstracts/variables";
 @use "../abstracts/mixin";
+@use "../abstracts/variables";
 
 .header {
-  @include mixin.header(
+  @include mixin.container(
     100%,
     variables.$min-height,
     url("../assets/images/main-photo.jpg"),

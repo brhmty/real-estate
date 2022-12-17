@@ -10,6 +10,9 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  margin: none;
+  display: "";
+  flex-direction: "";
 }
 
 @font-face {
@@ -52,6 +55,7 @@ nav .--headlink .--home {
 nav .nav-links {
   text-align: right;
   flex: 1;
+  z-index: 2;
 }
 nav .nav-links ul li {
   list-style: none;
@@ -92,13 +96,134 @@ nav #close-icon {
   font-size: 4em;
   font-weight: bold;
   color: red;
+  background-color: none;
+  margin-top: none;
 }
 .__main-box .--main-p {
   font-size: 1.1em;
-  margin-top: 20px;
   font-weight: bold;
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+}
+
+.houses {
+  width: 80%;
+  min-height: 100vh;
+  background-image: none;
+  background-position: none;
+  background-size: none;
+  position: none;
+  margin: auto;
+  display: "";
+  flex-direction: "";
+}
+.houses h1,
+.houses p {
+  text-align: center;
+  margin: 20px;
+}
+.houses h1 {
+  font-size: 4em;
+  font-weight: bold;
+  color: red;
+  background-color: none;
+  margin-top: none;
+}
+.houses > p {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+}
+.houses .house-imgs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.houses .house-imgs > div > p {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  background-color: none;
+  margin-top: none;
+  position: absolute;
+  margin: 0;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  opacity: 0;
+  z-index: 2;
+}
+.houses .__house-1 {
+  width: 30%;
+  min-height: 70vh;
+  background-image: url(../../assets/images/house-1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.houses .__house-1:hover p {
+  bottom: 50%;
+  opacity: 1;
+  transition: 2s;
+}
+.houses .__house-1:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(200, 0, 0);
+  opacity: 0.5;
+  z-index: 1;
+}
+.houses .__house-2 {
+  width: 30%;
+  min-height: 70vh;
+  background-image: url(../../assets/images/house-2.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.houses .__house-2:hover p {
+  bottom: 50%;
+  opacity: 1;
+  transition: 2s;
+}
+.houses .__house-2:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(200, 0, 0);
+  opacity: 0.5;
+  z-index: 1;
+}
+.houses .__house-3 {
+  width: 30%;
+  min-height: 70vh;
+  background-image: url(../../assets/images/house-3.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.houses .__house-3:hover p {
+  bottom: 50%;
+  opacity: 1;
+  transition: 2s;
+}
+.houses .__house-3:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(200, 0, 0);
+  opacity: 0.5;
+  z-index: 1;
 }
 
 @media (max-width: 480px) {
@@ -113,22 +238,28 @@ nav #close-icon {
   nav .nav-links {
     position: absolute;
     right: 0px;
-    top: 10px;
+    top: 0px;
     display: none;
   }
   nav .nav-links ul li {
-    display: block;
+    display: flex;
+    align-content: space-between;
     background-color: red;
-  }
-  nav .nav-links ul {
-    border: 2px solid black;
-  }
-  nav .nav-links a {
-    color: blue;
   }
   nav .nav-links li {
     text-align: center;
-    border-bottom: 2px solid black;
+  }
+  nav .nav-links a {
+    color: white;
+    padding: 10px;
+    font-weight: lighter;
+  }
+  nav #close-icon {
+    display: flex;
+    align-items: flex-end;
+    padding: 10px;
+    color: white;
+    background-color: red;
   }
   nav #bar-icon {
     display: block;
@@ -136,18 +267,36 @@ nav #close-icon {
     position: absolute;
     right: 10px;
     top: 10px;
+    z-index: 1;
   }
   .__main-box .--main-h1 {
     font-size: 1.5em;
     font-weight: bold;
     color: red;
+    background-color: none;
+    margin-top: none;
   }
   .__main-box .--main-p {
     font-size: 0.8em;
-    margin-top: 10px;
     font-weight: bold;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
+  }
+  .houses .house-imgs {
+    flex-direction: column;
+    align-content: space-between;
+  }
+  .houses .house-imgs .__house-1 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .houses .house-imgs .__house-2 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .houses .house-imgs .__house-3 {
+    width: 100%;
   }
 }
 @media (max-width: 508px) and (min-width: 480px) {
@@ -181,12 +330,14 @@ nav #close-icon {
     font-size: 1.8em;
     font-weight: bold;
     color: red;
+    background-color: none;
+    margin-top: none;
   }
   .__main-box .--main-p {
     font-size: 1.1em;
-    margin-top: 20px;
     font-weight: bold;
     color: white;
     background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 20px;
   }
 }/*# sourceMappingURL=styles.css.map */
