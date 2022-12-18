@@ -1,0 +1,69 @@
+@use "../abstracts/mixin";
+
+.testimonial {
+  @include mixin.container(80%, 60vh, $margin: auto);
+
+  .user-reviews {
+    @include mixin.user-flex();
+  }
+
+  h1,
+  p {
+    text-align: center;
+    margin: 20px;
+  }
+
+  h1 {
+    @include mixin.text-style(4em, bold, red);
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  i {
+    margin: auto;
+  }
+
+  > p {
+    @include mixin.text-style(
+      $font-size: 1.1em,
+      $font-weight: bold,
+      $margin-top: 20px,
+      $color: white,
+      $background-color: rgba(0, 0, 0, 0.7)
+    );
+  }
+
+  .__user-1 {
+    @include mixin.user-flex();
+    @include mixin.user-adj();
+    .__user-1-img {
+      @include mixin.img-container(
+        30%,
+        "",
+        url(../../assets/images/user-1.jpg)
+      );
+      @include mixin.user-img-container();
+    }
+    .__user-1-text {
+      @include mixin.user-text();
+    }
+  }
+
+  .__user-2 {
+    @include mixin.user-flex();
+    @include mixin.user-adj();
+    .__user-2-img {
+      @include mixin.img-container(
+        30%,
+        "",
+        url(../../assets/images/user-2.jpg)
+      );
+      @include mixin.user-img-container();
+    }
+    .__user-2-text {
+      @include mixin.user-text();
+    }
+  }
+}

@@ -87,6 +87,18 @@
       }
     }
   }
+
+  .testimonial {
+    .user-reviews {
+      flex-direction: column;
+    }
+    .__user-1 {
+      margin-bottom: 20px;
+    }
+    .__user-2 {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 @media (max-width: 508px) and (min-width: 480px) {

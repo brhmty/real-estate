@@ -46,7 +46,11 @@
     }
   }
   .__house-1 {
-    @include mixin.house-container(url(../../assets/images/house-1.jpg));
+    @include mixin.img-container(
+      30%,
+      70vh,
+      url(../../assets/images/house-1.jpg)
+    );
     &:hover {
       p {
         @include mixin.house-p();
@@ -58,7 +62,11 @@
   }
 
   .__house-2 {
-    @include mixin.house-container(url(../../assets/images/house-2.jpg));
+    @include mixin.img-container(
+      30%,
+      70vh,
+      url(../../assets/images/house-2.jpg)
+    );
     &:hover {
       p {
         @include mixin.house-p();
@@ -70,7 +78,11 @@
   }
 
   .__house-3 {
-    @include mixin.house-container(url(../../assets/images/house-3.jpg));
+    @include mixin.img-container(
+      30%,
+      70vh,
+      url(../../assets/images/house-3.jpg)
+    );
     &:hover {
       p {
         @include mixin.house-p();

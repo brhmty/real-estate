@@ -176,7 +176,7 @@ nav #close-icon {
   width: 100%;
   height: 100%;
   background-color: rgb(200, 0, 0);
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: 1;
 }
 .houses .__house-2 {
@@ -199,7 +199,7 @@ nav #close-icon {
   width: 100%;
   height: 100%;
   background-color: rgb(200, 0, 0);
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: 1;
 }
 .houses .__house-3 {
@@ -222,8 +222,111 @@ nav #close-icon {
   width: 100%;
   height: 100%;
   background-color: rgb(200, 0, 0);
-  opacity: 0.5;
+  opacity: 0.3;
   z-index: 1;
+}
+
+.testimonial {
+  width: 80%;
+  min-height: 60vh;
+  background-image: none;
+  background-position: none;
+  background-size: none;
+  position: none;
+  margin: auto;
+  display: "";
+  flex-direction: "";
+}
+.testimonial .user-reviews {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: 50%;
+}
+.testimonial h1,
+.testimonial p {
+  text-align: center;
+  margin: 20px;
+}
+.testimonial h1 {
+  font-size: 4em;
+  font-weight: bold;
+  color: red;
+  background-color: none;
+  margin-top: none;
+}
+.testimonial h3 {
+  text-align: center;
+}
+.testimonial i {
+  margin: auto;
+}
+.testimonial > p {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: 20px;
+}
+.testimonial .__user-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: 50%;
+  background-color: rgb(243, 185, 175);
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.testimonial .__user-1 .__user-1-img {
+  width: 30%;
+  min-height: "";
+  background-image: url(../../assets/images/user-1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 10vh;
+  border-radius: 50%;
+  margin: 10px;
+  padding-right: 20px;
+}
+.testimonial .__user-1 .__user-1-text > p {
+  text-align: center;
+}
+.testimonial .__user-1 .__user-1-text .__star {
+  text-align: center;
+}
+.testimonial .__user-1 .__user-1-text .__star i {
+  color: yellow;
+}
+.testimonial .__user-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-basis: 50%;
+  background-color: rgb(243, 185, 175);
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.testimonial .__user-2 .__user-2-img {
+  width: 30%;
+  min-height: "";
+  background-image: url(../../assets/images/user-2.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 10vh;
+  border-radius: 50%;
+  margin: 10px;
+  padding-right: 20px;
+}
+.testimonial .__user-2 .__user-2-text > p {
+  text-align: center;
+}
+.testimonial .__user-2 .__user-2-text .__star {
+  text-align: center;
+}
+.testimonial .__user-2 .__user-2-text .__star i {
+  color: yellow;
 }
 
 @media (max-width: 480px) {
@@ -297,6 +400,15 @@ nav #close-icon {
   }
   .houses .house-imgs .__house-3 {
     width: 100%;
+  }
+  .testimonial .user-reviews {
+    flex-direction: column;
+  }
+  .testimonial .__user-1 {
+    margin-bottom: 20px;
+  }
+  .testimonial .__user-2 {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 508px) and (min-width: 480px) {
