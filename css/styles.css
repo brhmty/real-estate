@@ -329,6 +329,40 @@ nav #close-icon {
   color: yellow;
 }
 
+footer {
+  width: 100%;
+  min-height: 10vh;
+  background-image: none;
+  background-position: none;
+  background-size: none;
+  position: none;
+  margin: auto;
+  display: "";
+  flex-direction: "";
+}
+footer h1,
+footer p {
+  text-align: center;
+  margin: 20px;
+}
+footer h1 {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: red;
+  background-color: none;
+  margin-top: none;
+}
+footer p {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-top: none;
+}
+footer .__social-media {
+  text-align: center;
+}
+
 @media (max-width: 480px) {
   nav .--logo {
     width: 20px;

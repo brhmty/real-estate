@@ -1,0 +1,28 @@
+@use "../abstracts/mixin";
+
+footer {
+  @include mixin.container(100%, 10vh, $margin: auto);
+
+  h1,
+  p {
+    text-align: center;
+    margin: 20px;
+  }
+
+  h1 {
+    @include mixin.text-style(0.9em, bold, red);
+  }
+
+  p {
+    @include mixin.text-style(
+      $font-size: 1.1em,
+      $font-weight: bold,
+      $color: white,
+      $background-color: rgba(0, 0, 0, 0.7)
+    );
+  }
+
+  .__social-media {
+    text-align: center;
+  }
+}
